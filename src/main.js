@@ -8,6 +8,7 @@ import App from './App.vue'
 import Store from './store/store.js'
 
 import 'vuetify/dist/vuetify.min.css'
+import 'vue-material-design-icons/styles.css'
 
 window.Store = Store
 

@@ -11,10 +11,10 @@
         </v-toolbar-title>
         <v-spacer></v-spacer>
         <v-btn color="secondary" dark absolute bottom right fab :ripple="false" @click.native='addReceiver()'>
-          <v-icon>cloud_download</v-icon>
+          <cloud-download-icon />
         </v-btn>
         <v-btn color="primary" absolute bottom right fab :ripple="false" @click.native='addSender()' style="margin-right:60px">
-          <v-icon>cloud_upload</v-icon>
+          <cloud-upload-icon />
         </v-btn>
       </v-toolbar>
       <v-content>
@@ -46,6 +46,13 @@ import ClientManager from './components/ClientManager.vue'
 import RegisterForm from './components/RegisterForm.vue'
 import LoginForm from './components/LoginForm.vue'
 
+// icons --------
+import CloudDownloadIcon from 'vue-material-design-icons/CloudDownload.vue';
+import CloudUploadIcon from 'vue-material-design-icons/CloudUpload.vue';
+
+// --------------
+
+
 import { EventBus } from './event-bus'
 
 export default {
@@ -54,7 +61,9 @@ export default {
     AccountsManager,
     ClientManager,
     RegisterForm,
-    LoginForm
+    LoginForm,
+    CloudUploadIcon,
+    CloudDownloadIcon
   },
   watch: {
     active( newValue ) {
